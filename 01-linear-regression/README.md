@@ -19,17 +19,24 @@ Predict California housing prices using Linear Regression.
 - Potential outliers need to be verified using visualizations.
 - Target column added successfully.
 
-## EDA Summary
-(To be filled later)
 
-## Data Preprocessing
-(To be filled later)
+## EDA Summary &  Data Preprocessing
+Dataset
+EDA summary
+Correlation analysis
+Heat map
+
+
 
 ## Model Training
-(To be filled later)
+Train-test split
+Model used
 
 ## Evaluation Metrics
-(To be filled later)
+MAE
+MSE
+RMSE
+R²
 
 ## Key Learnings
 (To be filled later)
