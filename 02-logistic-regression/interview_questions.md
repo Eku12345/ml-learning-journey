@@ -285,3 +285,50 @@ Extension of Logistic Regression for more than two classes.
 ### 45. What is Softmax?
 
 Generalization of sigmoid used for multiclass classification.
+
+
+## Section 5: Advanced Interview Questions
+
+### 46. Explain Data Leakage with Titanic Dataset
+
+Answer:
+
+The column "alive" directly reveals the target outcome.
+
+Using it would leak information into the model and produce unrealistic performance.
+
+---
+
+### 47. Why did we use ColumnTransformer?
+
+Answer:
+
+Different preprocessing steps were required for numerical and categorical features.
+
+ColumnTransformer allows applying different pipelines to different feature groups.
+
+---
+
+### 48. Why did we use Pipeline?
+
+Answer:
+
+Pipeline ensures preprocessing and modeling steps are executed consistently and prevents data leakage.
+
+---
+
+### 49. Why did we use Cross Validation?
+
+Answer:
+
+A single train-test split may be lucky or unlucky.
+
+Cross Validation provides a more stable estimate of model performance.
+
+---
+
+### 50. Explain your Titanic Logistic Regression project in 2 minutes.
+
+Answer:
+
+Built a classification model to predict passenger survival on the Titanic dataset. Performed missing value handling, one-hot encoding, scaling, feature selection, logistic regression modeling, ROC-AUC evaluation, threshold tuning, cross validation, and regularization tuning. Achieved approximately 0.86 ROC-AUC with stable cross-validation performance.
