@@ -1,8 +1,10 @@
-# Decision Tree Classifier - Titanic Survival Prediction
+
+
+# Decision Tree Classifier - Bank Marketing Campaign Prediction
 
 ## Objective
 
-Build a Decision Tree classifier to predict passenger survival using the Titanic dataset and understand how tree-based models make decisions.
+Build a Decision Tree classifier to predict customer subscribe to a term deposit and understand how tree-based models make decisions.
 
 ---
 
@@ -23,7 +25,7 @@ Build a Decision Tree classifier to predict passenger survival using the Titanic
 
 ## Dataset
 
-Titanic Dataset (Seaborn)
+Bank Marketing
 
 ---
 
