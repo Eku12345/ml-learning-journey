@@ -27,7 +27,16 @@ Build a Decision Tree classifier to predict customer subscribe to a term deposit
 
 Bank Marketing
 
----
+
+## Initial Observations
+
+- Dataset contains 11,162 records and 17 features.
+- Target variable (deposit) is reasonably balanced.
+- No missing (NaN) values are present.
+- Some categorical features contain "unknown" values that may represent missing information.
+- The `balance` feature contains noticeable outliers.
+- `poutcome` has a large number of "unknown" values and requires further investigation.
+- Several binary categorical variables (housing, loan, default) are suitable for encoding.
 
 ## Algorithm
 
