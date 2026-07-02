@@ -41,17 +41,20 @@ Bank Marketing
 ## Algorithm
 
 * Decision Tree Classifier
-
+- Baseline model
+- Predictions
+- Confusion Matrix
+- Classification Report
+- Feature Importance
+- Tree Visualization
 ---
 
 ## Evaluation Metrics
 
 * Accuracy
-* Precision
-* Recall
-* F1 Score
+
 * Confusion Matrix
-* ROC-AUC
+
 
 ---
 
