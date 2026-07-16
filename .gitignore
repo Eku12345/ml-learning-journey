@@ -1,3 +1,5 @@
+^O
+04-random-forest/dataset/
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
