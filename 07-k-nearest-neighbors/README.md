@@ -1,35 +1,76 @@
---Why did you create the DataFrame manually instead of using data.frame?
+# K-Nearest Neighbors (KNN) - Breast Cancer Classification
 
-I created the DataFrame explicitly using data.data and data.feature_names because it's the most widely used and portable approach. Not all scikit-learn datasets provide a frame attribute, and the explicit construction makes it clear how the features and target are assembled.
+## Project Overview
 
---Why do we use fit_transform() on the training set but only transform() on the test set?
+This project demonstrates the implementation of the K-Nearest Neighbors (KNN) algorithm using the Breast Cancer Wisconsin dataset from Scikit-learn. The objective is to classify tumors as **Malignant** or **Benign** and understand how different hyperparameters affect model performance.
 
-The scaler should learn its parameters, such as the mean and standard deviation, only from the training data. The same learned parameters are then applied to the test data using transform(). This prevents data leakage and ensures that the model is evaluated on truly unseen data.
+---
 
---Why is StandardScaler commonly used with KNN instead of MinMaxScaler?
+## Dataset
 
+- **Dataset:** Breast Cancer Wisconsin Dataset
+- **Source:** Scikit-learn
+- **Total Samples:** 569
+- **Features:** 30 numerical features
+- **Target Classes:**
+  - Malignant (0)
+  - Benign (1)
 
-Both StandardScaler and MinMaxScaler can work with KNN. StandardScaler is commonly used because it centers features around zero with unit variance and performs well when features approximately follow a normal distribution. MinMaxScaler is useful when features have known minimum and maximum bounds. The choice depends on the data rather than KNN itself.
+---
 
+## Project Workflow
 
---How do you choose the value of K?
+1. Load the dataset
+2. Perform basic exploratory data analysis
+3. Split the dataset into training and testing sets
+4. Apply feature scaling using StandardScaler
+5. Train a baseline KNN classifier
+6. Evaluate model performance
+7. Perform hyperparameter tuning using GridSearchCV
+8. Compare baseline and tuned models
 
-We typically start with a reasonable baseline such as K = 5. Then we use cross-validation techniques like GridSearchCV to evaluate multiple values of K and select the one that gives the best validation performance. The optimal K depends on the dataset.
+---
 
---Why is KNN training fast but prediction slow?
+## Best Hyperparameters
 
-KNN performs almost no computation during training because it simply stores the training data. During prediction, it computes the distance between the new sample and all training samples, making inference computationally expensive.
+| Parameter | Value |
+|-----------|-------|
+| n_neighbors | 3 |
+| weights | uniform |
+| metric | euclidean |
 
---What's the difference between predict() and predict_proba()?
+---
 
-Answer:
+## Results
 
-predict() returns the final predicted class label (e.g., 0 or 1).
-predict_proba() returns the probability of each class, which can help assess the model's confidence in its prediction.
+| Model | Accuracy |
+|--------|----------|
+| Baseline KNN | 95.61% |
+| Tuned KNN | 98.25% |
 
-Q. Why do we evaluate on the test set instead of the training set?
+---
 
-The purpose of the test set is to evaluate how well the model generalizes to unseen data. Since the model has already learned from the training data, evaluating on it can give an overly optimistic estimate of performance. The test set provides a more realistic assessment of how the model is likely to perform in production.
+## Key Learnings
 
+- KNN is a distance-based supervised learning algorithm.
+- Feature scaling is essential for KNN.
+- The choice of K significantly impacts model performance.
+- GridSearchCV helps identify optimal hyperparameters using cross-validation.
+- Evaluation should include Precision, Recall, F1-score, and the Confusion Matrix instead of relying solely on Accuracy.
 
+---
 
+## Technologies Used
+
+- Python
+- NumPy
+- Pandas
+- Matplotlib
+- Seaborn
+- Scikit-learn
+
+---
+
+## Author
+
+Ekta Kumari
