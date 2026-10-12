@@ -1,0 +1,5 @@
+pandas
+numpy
+scikit-learn
+lightgbm==3.3.5
+jupyter
